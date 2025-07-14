@@ -70,15 +70,18 @@ function ImageGallery() {
             1024: { slidesPerView: 4 }
           }}
         >
-          {galleryImages.map((src, idx) => (
-            <SwiperSlide key={idx}>
-              <img
-                src={src}
-                alt={`gallery-img-${idx}`}
-                className="w-full h-80 object-cover transition-all duration-300 shadow-lg hover:scale-105"
-              />
-            </SwiperSlide>
-          ))}
+{galleryImages.map((src, idx) => (
+  <SwiperSlide key={idx}>
+    <div className="w-full aspect-[5/7] md:h-70">
+      <img
+        src={src}
+        alt={`gallery-img-${idx}`}
+        className="w-full h-full object-cover transition-all duration-300 shadow-lg hover:scale-105"
+      />
+    </div>
+  </SwiperSlide>
+))}
+
           {/* חצים מותאמים */}
           <button className="custom-prev absolute top-1/2 left-0 z-20 -translate-y-1/2 text-white shadow-lg transition-all">
             <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
@@ -130,7 +133,7 @@ export default function Portfolio() {
     {
       title: "Private Classes",
       description: "Explore movement, sensuality & body connection in a safe, intimate space.",
-      longDesc: "Just you and me - a safe, soulful space where your body can speak freely. These one-on-one sessions are tailored to your rhythm, your needs, your energy. Whether you&apos;re a complete beginner or seeking deeper embodiment, we&apos;ll move with intention, sensuality, and care. Let&apos;s melt self-doubt, build confidence, and awaken your unique magic -from the inside out. This is your time. Your body. Your choice.",
+      longDesc: "Just you and me - a safe, soulful space where your body can speak freely. These one-on-one sessions are tailored to your rhythm, your needs, your energy. Whether you're a complete beginner or seeking deeper embodiment, we'll move with intention, sensuality, and care. Let's melt self-doubt, build confidence, and awaken your unique magic -from the inside out. This is your time. Your body. Your choice.",
       image: "/Booking/07.webp",
       image2: "/Booking/17.webp",
       buttons: [
@@ -152,7 +155,7 @@ export default function Portfolio() {
     {
       title: "Group classes",
       description: "Safe and empowering group classes to move, express & grow together.",
-      longDesc: "Come as you are, and move as you feel. My group classes are more than just a workout — they&apos;re a community. A space of girlies to feel free to share their voice, their body, and their vulnerability, where strength meets softness, and movement becomes medicine. Through pole and sensual flow, we explore the body together in a supportive, professional environment. No judgment. No pressure. Just real connection — with yourself and others. You don&apos;t have to do it alone. Let&apos;s rise together.",
+      longDesc: "Come as you are, and move as you feel. My group classes are more than just a workout — they're a community. A space of girlies to feel free to share their voice, their body, and their vulnerability, where strength meets softness, and movement becomes medicine. Through pole and sensual flow, we explore the body together in a supportive, professional environment. No judgment. No pressure. Just real connection — with yourself and others. You don't have to do it alone. Let's rise together.",
       image: "/Booking/05.webp",
       image2: "/Booking/15.webp",
       buttons: [
@@ -174,7 +177,7 @@ export default function Portfolio() {
     {
       title: "Workshops",
       description: "Workshops to build confidence, embrace sensuality & express your feminine.",
-      longDesc: "Whether it&apos;s a bachelorette night, a women&apos;s circle, or a soulful event — my workshops are created to awaken what&apos;s already inside you: power, joy, confidence, and feminine flow. With themes like burlesque, high heels, and sensual movement, we&apos;ll laugh, feel, and move through energy, emotion, and expression — together. Perfect for intimate gatherings, special celebrations, or any moment where women want to feel alive. Let&apos;s create an unforgettable experience for you and your women.",
+      longDesc: "Whether it's a bachelorette night, a women's circle, or a soulful event — my workshops are created to awaken what's already inside you: power, joy, confidence, and feminine flow. With themes like burlesque, high heels, and sensual movement, we'll laugh, feel, and move through energy, emotion, and expression — together. Perfect for intimate gatherings, special celebrations, or any moment where women want to feel alive. Let's create an unforgettable experience for you and your women.",
       image: "/Booking/08.webp",
       image2: "/Booking/18.webp",
       buttons: [
@@ -238,27 +241,27 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="Shir Amosi" className="min-h-screen flex items-center justify-center relative px-6">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/Pic/Shir.webp"
-            alt="Hero Background"
-            className="w-full h-full object-cover"
-            style={{ filter: "brightness(0.6)", objectPosition: "center 115%" }}
-          />
-        </div>
-        <div className="text-center max-w-4xl mx-auto relative z-10">
-          <div className="">
-            <h1 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.8) text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#d975e9] to-[#4c01c7] bg-clip-text text-transparent leading-tight">
-              Shir Amosi
-            </h1>
-            <p className="text-small md:text-2xl text-white/80 font-light tracking-wide">
-              Performer &amp; Instructor | Burlesque, Pole &amp; Heels
-            </p>
-            <p className="text-small md:text-2xl text-white/80 font-light tracking-wide">
-              Workshops &amp; Shows
-            </p>
+{/* Hero Section */}
+<section id="Shir Amosi" className="min-h-screen flex items-center justify-center relative px-6">
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/Pic/Shir.webp"
+      alt="Hero Background"
+      className="w-full h-full object-cover relative z-10 -translate-y-20"
+      style={{ filter: "brightness(0.6)", objectPosition: "center 115%" }}
+    />
+  </div>
+<div className="text-center max-w-4xl mx-auto relative z-10 -translate-y-10 md:translate-y-10">
+  <div>
+    <h1 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.8) text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#d975e9] to-[#4c01c7] bg-clip-text text-transparent leading-tight">
+      Shir Amosi
+    </h1>
+    <p className="text-small md:text-2xl text-white/80 font-light tracking-wide">
+      Performer &amp; Instructor | Burlesque, Pole &amp; Heels
+    </p>
+    <p className="text-small md:text-2xl text-white/80 font-light tracking-wide">
+      Workshops &amp; Shows
+    </p>
             <div className="mt-8">
               <Button
                 onClick={() => scrollToSection('Booking')}
@@ -309,19 +312,19 @@ export default function Portfolio() {
                 About Me
               </h2>
               <p className="text-lg text-white/80 leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-[#c384ff]">Shir Amosi</span>! I&apos;m a passionate pole-dance instructor, burlesque and high-heels dancer, performer, and creative spirit dedicated to empowering women through movement, self-expression, and inner connection.
+                Hi, I'm <span className="font-semibold text-[#c384ff]">Shir Amosi</span>! I'm a passionate pole-dance instructor, burlesque and high-heels dancer, performer, and creative spirit dedicated to empowering women through movement, self-expression, and inner connection.
               </p>
               <p className="text-lg text-white/80 leading-relaxed">
-                With eight years of experience on and off the stage, I&apos;ve had the honor of competing in pole-dance competitions both in Israel and internationally. These moments helped shape my unique voice as an artist and deepen my belief in the transformative power of dance.
+                With eight years of experience on and off the stage, I've had the honor of competing in pole-dance competitions both in Israel and internationally. These moments helped shape my unique voice as an artist and deepen my belief in the transformative power of dance.
               </p>
               <p className="text-lg text-white/80 leading-relaxed">
-                In addition to teaching, I&apos;m an experienced performer who has graced numerous stages, blending pole-dance with theatrical styles like burlesque, cabaret and vogue. I bring storytelling, sensuality, and bold feminine energy to every performance.
+                In addition to teaching, I'm an experienced performer who has graced numerous stages, blending pole-dance with theatrical styles like burlesque, cabaret and vogue. I bring storytelling, sensuality, and bold feminine energy to every performance.
               </p>
               <p className="text-lg text-white/80 leading-relaxed">
                 I specialize in working with beginners, helping them build confidence, strength, and body awareness from the very first class. My teaching style combines technique, emotion, and sensual expression, creating a safe and uplifting space where every woman can explore her rhythm and reconnect with her magic.
               </p>
               <p className="text-lg text-white/80 leading-relaxed">
-                <span className="font-semibold text-[#c384ff]">Private classes and live performances are available for booking.</span> Whether you&apos;re looking to start your pole journey or bring unforgettable energy to your next event, I&apos;d love to connect.
+                <span className="font-semibold text-[#c384ff]">Private classes and live performances are available for booking.</span> Whether you're looking to start your pole journey or bring unforgettable energy to your next event, I'd love to connect.
               </p>
             </div>
           </div>
@@ -419,7 +422,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto">
           <div className="backdrop-blur-xl bg-white/5 p-5 border border-white/10 shadow-2xl">
             <h2 className="text-4xl font-bold mb-8 mt-5 text-center text-[#c384ff]">
-              Let&apos;s Connect
+              Let's Connect
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {socialLinks.map((link, index) => (
