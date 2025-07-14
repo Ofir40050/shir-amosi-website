@@ -12,6 +12,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
