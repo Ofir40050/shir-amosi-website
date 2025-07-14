@@ -45,6 +45,7 @@ const galleryImages = [
   "/Gallery/41.webp",
   "/Gallery/42.webp",
   "/Gallery/43.webp",
+  "/Gallery/44.jpeg",
 ];
 
 function ImageGallery() {
@@ -294,44 +295,64 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="About" className="py-10 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="backdrop-blur-xl bg-white/5 p-10 border border-white/10 shadow-2xl flex flex-col md:flex-row items-center gap-12">
-            <div className="flex flex-col gap-5 w-full md:w-1/4 items-center">
-              <img
-                src="/About/04.webp"
-                alt="Shir performing"
-                className="w-60 h-70 object-cover shadow-lg hover:scale-105 transition"
-              />
-              <img
-                src="/About/01.webp"
-                alt="Pole dance"
-                className="w-60 h-70 object-cover shadow-lg hover:scale-105 transition"
-              />
-            </div>
-            <div className="w-full md:w-2/3 space-y-6">
-              <h2 className="text-4xl font-bold mb-4 text-[#c384ff] leading-relaxed">
-                About Me
-              </h2>
-              <p className="text-lg text-white/80 leading-relaxed">
-                Hi, I'm <span className="font-semibold text-[#c384ff]">Shir Amosi</span>! I'm a passionate pole-dance instructor, burlesque and high-heels dancer, performer, and creative spirit dedicated to empowering women through movement, self-expression, and inner connection.
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                With eight years of experience on and off the stage, I've had the honor of competing in pole-dance competitions both in Israel and internationally. These moments helped shape my unique voice as an artist and deepen my belief in the transformative power of dance.
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                In addition to teaching, I'm an experienced performer who has graced numerous stages, blending pole-dance with theatrical styles like burlesque, cabaret and vogue. I bring storytelling, sensuality, and bold feminine energy to every performance.
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                I specialize in working with beginners, helping them build confidence, strength, and body awareness from the very first class. My teaching style combines technique, emotion, and sensual expression, creating a safe and uplifting space where every woman can explore her rhythm and reconnect with her magic.
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                <span className="font-semibold text-[#c384ff]">Private classes and live performances are available for booking.</span> Whether you're looking to start your pole journey or bring unforgettable energy to your next event, I'd love to connect.
-              </p>
-            </div>
-          </div>
+<section id="About" className="py-10 px-6">
+  <div className="max-w-5xl mx-auto">
+    <div className="backdrop-blur-xl bg-white/5 p-10 border border-white/10 shadow-2xl flex flex-col md:flex-row items-center gap-12">
+      
+      {/* תמונות לדסקטופ בלבד */}
+      <div className="hidden md:flex flex-col gap-5 w-full md:w-1/4 items-center">
+        <img
+          src="/About/04.webp"
+          alt="Shir performing"
+          className="w-60 h-70 object-cover shadow-lg hover:scale-105 transition"
+        />
+        <img
+          src="/About/01.webp"
+          alt="Pole dance"
+          className="w-60 h-70 object-cover shadow-lg hover:scale-105 transition"
+        />
+      </div>
+      
+      {/* טקסט */}
+      <div className="w-full md:w-2/3 space-y-6">
+        <h2 className="text-4xl font-bold mb-4 text-[#c384ff] leading-relaxed">
+          About Me
+        </h2>
+        <p className="text-lg text-white/80 leading-relaxed">
+          Hi, I'm <span className="font-semibold text-[#c384ff]">Shir Amosi</span>! I'm a passionate pole-dance instructor, burlesque and high-heels dancer, performer, and creative spirit dedicated to empowering women through movement, self-expression, and inner connection.
+        </p>
+        <p className="text-lg text-white/80 leading-relaxed">
+          With eight years of experience on and off the stage, I've had the honor of competing in pole-dance competitions both in Israel and internationally. These moments helped shape my unique voice as an artist and deepen my belief in the transformative power of dance.
+        </p>
+
+        {/* תמונות למוביל בלבד, אחרי הפסקה השנייה */}
+        <div className="flex md:hidden flex-row gap-4 justify-center my-4">
+          <img
+            src="/About/04.webp"
+            alt="Shir performing"
+            className="w-1/2 h-40 object-cover shadow-lg hover:scale-105 transition"
+          />
+          <img
+            src="/About/01.webp"
+            alt="Pole dance"
+            className="w-1/2 h-40 object-cover shadow-lg hover:scale-105 transition"
+          />
         </div>
-      </section>
+
+        <p className="text-lg text-white/80 leading-relaxed">
+          In addition to teaching, I'm an experienced performer who has graced numerous stages, blending pole-dance with theatrical styles like burlesque, cabaret and vogue. I bring storytelling, sensuality, and bold feminine energy to every performance.
+        </p>
+        <p className="text-lg text-white/80 leading-relaxed">
+          I specialize in working with beginners, helping them build confidence, strength, and body awareness from the very first class. My teaching style combines technique, emotion, and sensual expression, creating a safe and uplifting space where every woman can explore her rhythm and reconnect with her magic.
+        </p>
+        <p className="text-lg text-white/80 leading-relaxed">
+          <span className="font-semibold text-[#c384ff]">Private classes and live performances are available for booking.</span> Whether you're looking to start your pole journey or bring unforgettable energy to your next event, I'd love to connect.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Portfolio Section */}
       <section id="Booking" className="py-10">
