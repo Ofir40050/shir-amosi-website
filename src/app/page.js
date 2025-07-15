@@ -225,7 +225,11 @@ export default function Portfolio() {
                 <button
                   onClick={() => scrollToSection('Shir Amosi')}
                 >
-                  Shir Amosi
+                      <img
+                        src="/ShirLogo1.png"
+                        className="flex items-center h-10 w-auto"
+                      />
+
                 </button>
               </div>
             </div>
