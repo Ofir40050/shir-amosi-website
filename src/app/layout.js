@@ -2,6 +2,8 @@
 
 import "./globals.css";
 import NavigationBar from '@/components/NavigationBar';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Shir Amosi",
@@ -50,6 +52,8 @@ export default function RootLayout({ children }) {
           }}
         />
         <NavigationBar />
+         <Analytics />
+        <SpeedInsights/>
         <div className="pt-20">{children}</div>
       </body>
     </html>
